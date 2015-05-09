@@ -2,18 +2,14 @@
 
 using namespace std;
 
+
+	int min(int a, int b, int c){
+		return a<b?a<c?a:c:b<c?b:c;
+		}
+
 int main()
 	{
-		int** table=new int*[5];
-		for(int i=0;i<5;i++)
-			table[i]=new int[5];
-		for(int i=0;i<5;i++)
-			for(int j=0;j<5;j++)
-				table[i][j]=i*j;
-		for(int i=0;i<5;i++){
-			for(int j=0;j<5;j++)
-				cout<<table[i][j]<<" ";
-			cout<<"\n";
-			}
+		cout<<min(25,5,23);
+		cout<<min(235,34,43);
 		return 0;
 	}
