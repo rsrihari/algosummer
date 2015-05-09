@@ -14,6 +14,5 @@ int main()
 			for(int j=0;j<5;j++)
 				cout<<table[i][j]<<" ";
 			cout<<"\n";
-			}
 		return 0;
 	}
