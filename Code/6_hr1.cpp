@@ -35,7 +35,7 @@ class SUBSUM{
 			return table[arr_size][sum]; 
 			}*/
 	
-	void gointo(int row, int column, int* result, int level){
+    void gointo(int row, int column, int* result, int level){
 		if(row==0){
 			return;}
 		int temp=column-arr[row-1];
@@ -45,7 +45,7 @@ class SUBSUM{
 		if(temp>0)
 			gointo(row-1,temp, result, level+1);
 		return;
-		}
+        }
 			
 	public:
 		SUBSUM(){
@@ -67,8 +67,9 @@ class SUBSUM{
 					result1[i]=0;
 					result2[i]=0;
 					}
-				gointo(arr_size, sum1, result1, 1);
-				gointo(arr_size, sum2, result2, 1);
+                //findall(sum1, result1);
+                gointo(arr_size, sum1, result1, 1);
+                gointo(arr_size, sum2, result2, 1);
 				int temp=0;
 				
 				for(int i=0;i<arr_size;i++){
